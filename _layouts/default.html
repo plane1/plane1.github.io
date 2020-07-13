@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head> <!-- includes info that is not shown -->
+    <!-- CREATE AND ADD BELOW TO: HEAD.HTML -->
+    {% include head.html %}
+  </head>
+  <body>
+    {% include header.html %}
+
+    {{ content }} <!-- inserts the contents of /index.html -->
+
+    {% include footer.html %}
+  </body>
+</html>
