@@ -1,11 +1,8 @@
 ---
 layout: default
 ---
-<!-- The below content is used by default.html ('{{ content }}') -->
-<!-- to create this full index.html document                     -->
-<div class="home">
+<div class="home-page">
   <h1>Hi, I'm Patrick.</h1>
-  <h2>Welcome to my website.</h2>
   <p>
     I am a mechancial engineer currently living in Indianapolis.  This is a space where I share my hobbies.
   </p>
@@ -13,17 +10,22 @@ layout: default
     Please visit my contact page for more info about me.
   </p>
 
-  <ul>
-    <li>pics</li>
-    <li>projects</li>
-    <li>contact</li>
-  <ul>
+  <div class="link-boxes">
+    <div class="link-box pic-box">
+      <a href="/gallery">pics</a>
+    </div>
+    <div class="link-box proj-box">
+      <a href="/shop">Projects</a>
+    </div>
+    <div class="link-box contact-box">
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
 
-  <h3>About</h3>
-  <p>
-    This site was developed from scratch by Patrick Lane and the code can be found on my modest GitHub page.
-  </p>
-  <p>
-    This site is hosted on GitHub Pages and was built using Jekyll.
-  </p>
+  <h2>about this site</h2>
+    <div class="about-site">
+      <p>
+        This site was coded from scratch by Patrick Lane after learning some (i.e., "enough") HTML, CSS & Layout from Michael Hartl's Learn Enough series. This site is hosted on GitHub Pages and was built using Jekyll. The code can be found on my modest GitHub.
+      </p>
+    </div>
 </div>

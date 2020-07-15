@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head> <!-- includes info that is not shown -->
-    <!-- CREATE AND ADD BELOW TO: HEAD.HTML -->
-    
-  </head>
+  <head>
+  <title>Patrick Lane</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
   <body>
-    <header class="header">
+    <header class="header-bar">
   <ul class="header-nav">
     <li><a href="/">Home</a></li>
-    <li><a href="/gallery">Pics</a></li>
+    <li><a href="/gallery">Pictures</a></li>
     <li><a href="/shop">Projects</a></li>
     <li><a href="/contact">Contact</a></li>
   </ul>
 </header>
 
-
-    <!-- The below content is used by default.html ('<div class="shop">
-  <h1>This will be the woodworking projects page</h1>
-</div>
-') -->
-<!-- to create this full index.html document                     -->
-<div class="home">
+    <div class="content-container">
+      <div class="home-page">
   <h1>Hi, I'm Patrick.</h1>
-  <h2>Welcome to my website.</h2>
   <p>
     I am a mechancial engineer currently living in Indianapolis.  This is a space where I share my hobbies.
   </p>
@@ -30,24 +28,29 @@
     Please visit my contact page for more info about me.
   </p>
 
-  <ul>
-    <li>pics</li>
-    <li>projects</li>
-    <li>contact</li>
-  <ul>
+  <div class="link-boxes">
+    <div class="link-box pic-box">
+      <a href="/gallery">pics</a>
+    </div>
+    <div class="link-box proj-box">
+      <a href="/shop">Projects</a>
+    </div>
+    <div class="link-box contact-box">
+      <a href="/contact">Contact</a>
+    </div>
+  </div>
 
-  <h3>About</h3>
-  <p>
-    This site was developed from scratch by Patrick Lane and the code can be found on my modest GitHub page.
-  </p>
-  <p>
-    This site is hosted on GitHub Pages and was built using Jekyll.
-  </p>
+  <h2>about this site</h2>
+    <div class="about-site">
+      <p>
+        This site was coded from scratch by Patrick Lane after learning some (i.e., "enough") HTML, CSS & Layout from Michael Hartl's Learn Enough series. This site is hosted on GitHub Pages and was built using Jekyll. The code can be found on my modest GitHub.
+      </p>
+    </div>
 </div>
- <!-- inserts the contents of /index.html -->
 
+    </div>
     <header class="footer">
-  <h1>this is the footer</h1>
+  <p>this is the footer</p>
 </header>
 
   </body>

@@ -1,3 +1,12 @@
+:root {
+  --color-1: #e7ebef;
+  --color-2: #303c4a;
+  --color-3: #fff899;
+  --color-4: #e57a44;
+  --color-5: #758290;
+}
+
+
 /*
 ########  ########  ######  ######## ########
 ##     ## ##       ##    ## ##          ##
@@ -67,16 +76,34 @@ a img {
 */
 
 html {
+  box-shadow: 0 0 0 30px var(--color-2) inset;
   padding: 0 30px;
 }
-
+.content-container {
+  display: flex;
+  flex: 1 1 auto;
+  width: 100%;
+  padding-top: 10vh;
+}
 body {
-  font-family: helvetica, arial, sans;
+  background-color: var(--color-1);
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', helvetica, arial, sans;
+  min-height: 100vh;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: helvetica, arial, sans;
+h1 {
+  font-family: 'Montserrat', helvetica, arial, sans;
+  font-size: 3.5rem;
+  font-weight: 300;
 }
+h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', helvetica, arial, sans;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
 
 /*
 ##     ## ########    ###    ########  ######## ########
@@ -87,3 +114,171 @@ h1,h2,h3,h4,h5,h6 {
 ##     ## ##       ##     ## ##     ## ##       ##    ##
 ##     ## ######## ##     ## ########  ######## ##     ##
 */
+
+.header-bar {
+  background-color: var(--color-2);
+  position: fixed;
+  width: 100%;
+}
+.header-nav {
+  float: right;
+  padding: 4.75vh 60px 20px 0;
+}
+.header-nav > li {
+  display: inline-block;
+  margin-left: 2em;
+}
+.header-nav li > a {
+  color: var(--color-1);
+  font-size: 0.9rem;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+.header-nav li:last-child a {
+  color: var(--color-3);
+  font-weight: bold;
+  text-transform: lowercase;
+}
+
+/*
+##     ##  #######  ##     ## ########
+##     ## ##     ## ###   ### ##
+##     ## ##     ## #### #### ##
+######### ##     ## ## ### ## ######
+##     ## ##     ## ##     ## ##
+##     ## ##     ## ##     ## ##
+##     ##  #######  ##     ## ########
+*/
+.home-page {
+  padding: 5vh 5vh;
+  display: block;
+  margin: auto;
+}
+.home-page h1 {
+  padding-top: 3vh;
+  padding-bottom: 4vh;
+}
+.home-page h2 {
+  padding-top: 7vh;
+  font-size: 1rem;
+}
+.home-page p {
+  padding: 0.5rem 0;
+}
+
+.link-boxes {
+  float: none;
+  font-size: 2rem;
+  margin: auto;
+  max-width: 960px;
+  overflow: hidden;
+}
+.link-box {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  font-size: 1rem;
+  margin: 2rem 0 0;
+  min-height: 300px;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+  width: 33%;
+}
+.link-box a {
+  color: var(--color-1);
+  font-size: 2rem;
+  left: 50%;
+  letter-spacing: 0.9px;
+  position: absolute;
+  text-decoration: none;
+  text-transform: lowercase;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.pic-box {
+  background-color: var(--color-4);
+}
+.proj-box {
+  background-color: var(--color-5);
+}
+.contact-box {
+  background-color: var(--color-3);
+}
+.contact-box a {
+  display: block;
+  color: var(--color-2);
+}
+.about-site {
+  font-size: 0.85rem;
+}
+
+/*
+ ######      ###    ##       ##       ######## ########  ##    ##
+##    ##    ## ##   ##       ##       ##       ##     ##  ##  ##
+##         ##   ##  ##       ##       ##       ##     ##   ####
+##   #### ##     ## ##       ##       ######   ########     ##
+##    ##  ######### ##       ##       ##       ##   ##      ##
+##    ##  ##     ## ##       ##       ##       ##    ##     ##
+ ######   ##     ## ######## ######## ######## ##     ##    ##
+*/
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh 2.5vh 5vh 5vh;
+  width: 90vw;
+  vertical-align: top;
+}
+.gallery-box {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex: 0 0 31%;
+  flex-direction: column;
+  margin-right: 2%;
+  margin: 0 2% 2% 0;
+  /* MAKE ALBUM COVERS TRANSPARENT:
+  background-color: rgba(255,255,255,0.5);
+  background-blend-mode: lighten;  */
+}
+.gallery-box a {
+  color: var(--color-1);
+}
+.gallery h1 {
+  display: block;
+  padding: 3vh 0vh 4vh 0;
+  color: var(--color-2);
+  width: 100%;
+}
+.album-link {
+  border: solid 1px blue;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-2);
+  display: flex;
+  flex: 1 0 auto;
+  font-size: 1.5rem;
+  min-height: 55vh;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .gallery{
+    display: block
+  }
+}
+@media (max-width: 800px) {
+  .gallery-box {
+    flex: 0 0 47.5%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-box {
+    flex: 0 0 22.5%;
+  }
+}
